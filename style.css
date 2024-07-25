@@ -2,7 +2,7 @@
     color: red;
 }
 .body{
-    background-image: url(/幻塔攒抽规划/background_pic.jpg);
+    background-image: url(./background_pic.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
