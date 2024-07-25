@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="body">
+    <div class="zuo">
+        <form class="ShuRu">
+            <img src="./MOJING.png" style="width:50px;height:50px;">
+            <input type="number" placeholder="请输入墨晶数量" class="tiaoz1" oninput="shuru(1)">
+        </form>
+        <form class="ShuRu">
+            <img src="./CHIHE.png" style="width:50px;height:50px">
+            <input type="number" placeholder="请输入赤核数量" class="tiaoz1" oninput="shuru(2)">
+        </form>
+        <form class="ShuRu">
+            <img src="./HONGPIAO.png" style="width:50px;height:50px">
+            <input type="number" placeholder="请输入红票数量" class="tiaoz1" oninput="shuru(3)">
+        </form>
+        <div class="paiqi">
+            <div class="huodong-title">活动排期(后面带有问号的仅为猜测)</div>
+            <div class="time">11</div>
+            <input type="radio" name="select" class="dangqi" value="1"><label class="yineng">11</label><br>
+            <input type="radio" name="select" class="dangqi" value="2"><label class="lei">即将开启:梅丽尔(8.22-9.26)(?)</label><br>
+            <input type="radio" name="select" class="dangqi" value="3"><label class="huo">三刀(9.26-11.7)(?)</label><br>
+            <input type="radio" name="select" class="dangqi" value="4"><label class="bing">灰狐(11.7-12.12)(?)</label><br>
+            <input type="radio" name="select" class="dangqi" value="5"><label class="wuli">新物理(12.12-1.16)(?)</label><br>
+        </div>
+    </div>
+    <div class="you">
+      <div class="zongji">
+        <div class="mojing_tot">
+            <img src="./MOJING.png" style="width: 50px;height: 50px;">
+            <span class="mojing_tiaoz">总计墨晶:0</span>
+            <span class="mojing_tiaoz2">现有:0</span>
+            <span class="mojing_tiaoz2">月卡:0</span>
+            <span class="mojing_tiaoz2">地图资源:0</span>
+            <span class="mojing_tiaoz2">礼包:0</span>
+            <span class="mojing_tiaoz2">活动/日常获取:0</span>
+            <span class="mojing_tiaoz2">高定预留:0</span>
+        </div>
+        <div class="chihe_tot">
+            <img src="./CHIHE.png" style="width: 50px;height: 50px;">
+            <span class="chihe_tiaoz">总计赤核:0</span>
+            <span class="mojing_tiaoz2">现有:0</span>
+            <span class="mojing_tiaoz2">活动获取:0</span>
+            <span class="mojing_tiaoz2">地图资源:0</span>
+            <span class="mojing_tiaoz2">礼包:0</span>
+        </div>
+        <div class="hongpiao_tot">
+            <img src="./HONGPIAO.png" style="width: 50px;height: 50px;">
+            <span class="hongpiao_tiaoz">总计红票:0</span>
+            <span class="mojing_tiaoz2">现有:0</span>
+            <span class="mojing_tiaoz2">活动获取:0</span>
+            <span class="mojing_tiaoz2">地图资源:0</span>
+            <span class="mojing_tiaoz2">礼包:0</span>
+        </div>
+      </div>
+      <div class="cli" onclick="onlick(1)" style="margin-top: 5px;">未跑地图</div>
+      <div class="weipao">
+        <div>
+            <input type="checkbox" class="ditu" data-value="1500_0_0"><label>星岛(合计1500墨)</label>
+            <input type="checkbox" class="ditu" data-value="1820_0_0"><label>班吉斯(合计1820墨)</label>
+            <input type="checkbox" class="ditu" data-value="1720_0_0"><label>纳维亚(合计1720墨)</label>
+            <input type="checkbox" class="ditu" data-value="1660_0_0"><label>克罗恩(合计1660墨)</label>
+            <input type="checkbox" class="ditu" data-value="430_0_0"><label>亚夏幻塔(合计430墨)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="ditu" data-value="1620_0_0"><label>沃兰(合计1620墨)</label>
+            <input type="checkbox" class="ditu" data-value="1470_4_3"><label>人工岛内岛(合计1470墨4球3票)</label>
+            <input type="checkbox" class="ditu" data-value="1680_4_3"><label>人工岛外岛(合计1680墨4球3票)</label>
+            <input type="checkbox" class="ditu" data-value="420_2_2"><label>沙暴地(合计420墨2球2票)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="ditu" data-value="360_2_2"><label>岩柱戈壁(合计360墨2球2票)</label>
+            <input type="checkbox" class="ditu" data-value="360_2_2"><label>流沙带(合计360墨2球2票)</label>
+            <input type="checkbox" class="ditu" data-value="700_9_3"><label>迷瘴沼泽(合计700墨9球3票)</label>
+            <input type="checkbox" class="ditu" data-value="0_6_0"><label>灰域(合计6球)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="ditu" data-value="0_8_0"><label>暗域(合计8球)</label>
+            <input type="checkbox" class="ditu" data-value="680_10_3"><label>无序深渊(合计680墨10球3票)</label>
+            <input type="checkbox" class="ditu" data-value="60_5_3"><label>溟海(合计60墨5球3票)</label>
+            <input type="checkbox" class="ditu" data-value="0_2_2"><label>暗源洞穴(合计2球2票)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="ditu" data-value="40_8_4"><label>茵纳斯(合计40墨8球4票)</label>
+            <input type="checkbox" class="ditu" data-value="40_5_3"><label>龙口火山(合计40墨5球3票)</label>
+            <input type="checkbox" class="ditu" data-value="40_4_2"><label>幽岩洞穴(合计40墨4球2票)</label>
+            <input type="checkbox" class="ditu" data-value="300_4_2"><label>镜都A区(合计300墨4球2票)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="ditu" data-value="300_7_2"><label>镜都B区(合计300墨7球2票)</label>
+            <input type="checkbox" class="ditu" data-value="300_7_2"><label>镜都C区(合计300墨7球2票)</label>
+            <input type="checkbox" class="ditu" data-value="500_14_4"><label>离州(合计500墨14球4票)</label>
+            <input type="checkbox" class="ditu" data-value="200_7_3"><label>云霄山庄(合计200墨7球3票)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="ditu" data-value="700_18_4"><label>震州(合计700墨18球4票)</label>
+            <input type="checkbox" class="ditu" data-value="300_9_3"><label>兑州(合计300墨9球3票)</label>
+            <input type="checkbox" class="ditu" data-value="400_11_3"><label>兑州禁地(合计400墨11球3票)</label>
+            <input type="checkbox" class="ditu" data-value="600_20_3"><label>坎州(合计600墨20球3票)</label>
+        </div>
+        <div>
+            <input type="checkbox" class="ditu" data-value="0_4_0"><label>九域零散支线(合计4球)</label>
+            <input type="checkbox" class="ditu" data-value="600_15_3"><label>边缘区域(合计600墨15球3票)</label>
+            <input type="checkbox" class="ditu" data-value="700_19_3"><label>中心区域(合计700墨19球3票)</label>
+        </div>
+      </div>
+      <div class="cli" onclick="onlick(2)" style="margin-top: 5px;">礼包购买</div>
+      <div class="libao">
+        <div>
+            <input type="checkbox" class="yueka"><label>月卡</label><br>
+            <input type="checkbox" class="shouchong" value="1"><label>首充6元</label><br>
+            <input type="checkbox" class="shouchong" value="2"><label>首充30元</label><br>
+            <input type="checkbox" class="shouchong" value="3"><label>首充98元</label><br>
+            <input type="checkbox" class="shouchong" value="4"><label>首充198元</label><br>
+            <input type="checkbox" class="shouchong" value="5"><label>首充328元</label><br>
+            <input type="checkbox" class="shouchong" value="6"><label>首充648元</label><br>
+            <div class="tongxing" style="color: chartreuse;">通行证共0期</div>
+            <label>通行证(68档)</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="0">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="0">+</button>
+            </div><br>
+            <label>通行证(128档)</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="1">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="1">+</button>
+            </div><br>
+            <div style="color:azure;">礼包请自行查看能买几次QAQ(一般每逢节日都会出以下三个礼包,每个能买3次)</div>
+            <label>礼包1(500钛晶----5球5票)</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="2">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="2">+</button>
+            </div><br>
+            <label>礼包2(1280钛晶----880墨10球10票)</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="3">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="3">+</button>
+            </div><br>
+            <label>礼包3(1980钛晶----1680墨15球15票)</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="4">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="4">+</button>
+            </div><br>
+        </div>
+        <div>
+        </div>
+      </div>
+      <div class="cli" onclick="onlick(3)" style="margin-top: 5px;">高定预留</div>
+      <div class="yuliu">
+        <label>10000墨高定</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="5">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="5">+</button>
+            </div><br>
+            <label>9400墨高定</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="6">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="6">+</button>
+            </div><br>
+            <label>10610墨高定</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="7">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="7">+</button>
+            </div><br>
+            <label>17800墨高定</label>
+            <div style="display: inline-block;">
+                <button class="jian" value="8">-</button>
+                <input class="libao1" value="0">
+                <button class="jia" value="8">+</button>
+            </div><br>
+            <div style="color: azure;">
+                保底10000墨高定:水果硬糖，勿忘我，时代，早樱(午夜时分)
+            </div>
+            <div style="color: yellow;">
+                (保底9400墨):幻梦，跳跳智仆(载具)，学院时代，超究极的纯白(不破咲)，海滨假日，绯红童谣(蕾贝)，玫瑰晚宴
+            </div>
+            <div style="color: blue;">
+                (保底10610墨):纤纤夏影(凛夜)，古堡魅影(乌米)，荆白绽放(岚)，金春华章，白凯华调(艾丽丝)，星月予卿(菲欧娜)，黑白同调，灿星蚀日(蕾比莉亚)，缘此青绿，墨池清修(榴火)，琦想魅影，晴空幽篁(米米)，默利尼娅，海风絮语，霜花盛夏(凌寒)，澄泠幽韵(南音)，轩仪堂堂，织锦樱璃，浮寐梦呓(布勒薇)，浸袭之影(帕洛蒂)，灰城眺望(明日香)，绯炽之红，未来回响(绫波零)，绫罗时序(姬玉)，出勤时刻(洛斯琳)，遐想韶光(安可)，宾治奇妙夜(安可)
+            </div>
+            <div style="color: green;">
+                (保底17800墨衣服+载具):急速飙风+雷鸣，不羁鼓点+猛犸，浮光絮语+太阳鱼，晨星巡弋+玄机鹿
+            </div>
+      </div>
+      <div class="cli" onclick="onlick(4)" style="margin-top: 5px;">日常/活动明细(本周/本期活动已获取请打勾)</div>
+      <div class="richang">
+        <input type="checkbox" class="ri"><label class="zhouchang">周常(350+100墨晶):</label><br>
+        <input type="checkbox" class="ri"><label class="qiandao">签到活动/执行供给:</label><br>
+        <input type="checkbox" class="ri"><label class="weihu">预计维护:</label><br>
+        <input type="checkbox" class="ri"><label class="shangdian">活动商店:</label><br>
+        <label class="shenyuan">深渊:</label><br>
+        <label class="pvp">巅峰联赛/命运突围(此处仅按低保算owo):</label>
+      </div>    
+    </div>
+    <script src="./java.js"></script>
+</body>
+</html>
