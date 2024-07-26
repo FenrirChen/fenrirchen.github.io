@@ -638,7 +638,7 @@ var dangqi=document.querySelectorAll(".dangqi");
 
 dangqi.forEach(function(a){
 a.addEventListener('change',function(){
-  var =document.getElementsByClassName("yueka")[0];
+  var s=document.getElementsByClassName("yueka")[0];
   if(s.checked)
     {
       mojing_yueka=day*100;
@@ -650,7 +650,7 @@ a.addEventListener('change',function(){
 })
 })
 
-var =document.getElementsByClassName("yueka")[0];
+var s=document.getElementsByClassName("yueka")[0];
 s.addEventListener('change',function(){
 if(s.checked)
   {
