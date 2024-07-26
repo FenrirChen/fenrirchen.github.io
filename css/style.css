@@ -7,6 +7,7 @@
     z-index: -1;
 }
 
+
 .ShuRu{
     color: red;
 }
@@ -14,6 +15,15 @@
     /* TODO 这个属性治标不治本，调调图片大小罢 */
     overflow-x: hidden; 
     font-family:STHupo;
+    background-attachment: fixed;
+    background-image: url('/img/background_pic.jpg');
+}
+
+@media (max-width: 600px) {
+    .body {  
+        background-image: url('/img/mobile_background.jpg');  
+        background-size: cover;   
+    }  
 }
 .paiqi,.zongji{
     background-color: rgb(255,192,203,0.7);
@@ -59,11 +69,11 @@
 .tiaoz1{
     position: absolute;
     height: 35px;
+    width: 14%;
 }
 .mojing_tiaoz2{
     display: block;
     position: relative;
-    left:120px;
 }
 .weipao,.libao,.yuliu,.richang{
     background-color: rgb(255,192,203,0.7);

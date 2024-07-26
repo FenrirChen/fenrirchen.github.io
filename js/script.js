@@ -326,6 +326,10 @@ document.getElementsByClassName("mojing_tiaoz2")[11].innerText=("活动获取:"+
 reflesh();
 }
 
+
+functionOption1();
+
+
 function functionOption2(){
 //周长墨晶
 endri=new Date(2024,8,26);
