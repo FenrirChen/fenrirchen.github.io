@@ -1,0 +1,120 @@
+#background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.ShuRu{
+    color: red;
+}
+.body{
+    /* TODO 这个属性治标不治本，调调图片大小罢 */
+    overflow-x: hidden; 
+    font-family:STHupo;
+}
+.paiqi,.zongji{
+    background-color: rgb(255,192,203,0.7);
+    border: black 2px solid;
+    border-radius: 5px;
+    width: 100%;
+}
+.huodong-title,.time{ 
+    text-align: center;
+}
+.wuli{
+    color: rgb(255,152,0);
+}
+.yineng{
+    color: rgb(0,150,136);
+}
+.lei{
+    color: rgb(126,87,194);
+}
+.huo{
+    color: rgb(229,57,53);
+}
+.bing{
+    color: rgb(30,136,229);
+}
+.zuo,.you{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.mojing_tiaoz{
+    position: relative;
+    bottom: 18px;
+}
+.chihe_tiaoz{
+    position: relative;
+    bottom: 18px;
+}
+.hongpiao_tiaoz{
+    position: relative;
+    bottom: 18px;
+}
+.tiaoz1{
+    position: absolute;
+    height: 35px;
+}
+.mojing_tiaoz2{
+    display: block;
+    position: relative;
+    left:120px;
+}
+.weipao,.libao,.yuliu,.richang{
+    background-color: rgb(255,192,203,0.7);
+    border-radius: 5px;
+    width: 100%;
+    font-family:STHupo;
+    overflow: hidden;
+    transition: 0.2s;
+}
+.cli{
+    background-color: rgb(255,192,203,0.7);
+}
+.jian{
+    position: relative;
+    left: 4px;
+    background-color: white;
+    border-radius: 5px 0 0 5px;
+    height: 20px;
+    border-left: black;
+    border-top: black;
+    border-bottom: black;
+}
+.libao1{
+    width: 20px;
+    text-align: center;
+}
+.jia{
+    position: relative;
+    right: 4px;
+    height: 20px;
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+    border-right: black;
+    border-top: black;
+    border-bottom: black;
+}
+
+.number-input {
+    display: flex;
+    align-items: center;
+}
+
+.minus, .plus {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.input-number {
+    width: 50px;
+    text-align: center;
+}
