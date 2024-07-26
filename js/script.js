@@ -35,32 +35,60 @@ setInterval(() => {
 setInterval(() => {  
 document.getElementsByClassName('yineng')[0].innerText=("当前卡池:噪音【诺拉】(7.11-8.22)------剩余时间:"+String(daysSinceYear2000("2024-08-22")-daysSinceYear2000(formatDateTime(now)))+"天");  
 }, 1000);
+
+
+
+let initialDevicePixelRatio = window.devicePixelRatio;
+var k1=Number(document.getElementsByClassName("weipao")[0].offsetHeight);
+var k2=Number(document.getElementsByClassName("libao")[0].offsetHeight);
+var k3=Number(document.getElementsByClassName("yuliu")[0].offsetHeight);
+var k4=Number(document.getElementsByClassName("richang")[0].offsetHeight);
+
+function updateDivHeights(){
+  k1=Number(document.getElementsByClassName("weipao")[0].offsetHeight);
+  k2=Number(document.getElementsByClassName("libao")[0].offsetHeight);
+  k3=Number(document.getElementsByClassName("yuliu")[0].offsetHeight);
+  k4=Number(document.getElementsByClassName("richang")[0].offsetHeight);
+}
+
+/*window.addEventListener('resize', () => {
+  // 检查 devicePixelRatio 是否发生了变化
+  if (window.devicePixelRatio !== initialDevicePixelRatio) {
+      // 更新 initialDevicePixelRatio
+      initialDevicePixelRatio = window.devicePixelRatio;
+      console.log("窗口大小改变了");
+      // 更新 divs 的高度
+      updateDivHeights();
+  }
+});*/
+
 function onlick(jj){
 if(jj==1)
 {
   var contan=document.getElementsByClassName("weipao")[0];
-  console.log(contan.offsetHeight);
-  contan.style.height=contan.offsetHeight==0?230+'px':0+'px';
+  contan.style.height=contan.offsetHeight==0?k1+'px':0+'px';
+  console.log(k1);
 }
 if(jj==2)
   {
     var contan=document.getElementsByClassName("libao")[0];
-    console.log(contan.offsetHeight);
-    contan.style.height=contan.offsetHeight==0?280+'px':0+'px';
+    contan.style.height=contan.offsetHeight==0?k2+'px':0+'px';
+    console.log(k2);
   }
 if(jj==3)
   {
     var contan=document.getElementsByClassName("yuliu")[0];
-    console.log(contan.offsetHeight);
-    contan.style.height=contan.offsetHeight==0?230+'px':0+'px';
+    contan.style.height=contan.offsetHeight==0?k3+'px':0+'px';
+    console.log(k3);
   }
   if(jj==4)
     {
       var contan=document.getElementsByClassName("richang")[0];
-      console.log(contan.offsetHeight);
-      contan.style.height=contan.offsetHeight==0?150+'px':0+'px';
+      contan.style.height=contan.offsetHeight==0?k4+'px':0+'px';
+      console.log(k4);
     }
 }
+
 var mojing_zong=0,mojing_xian=0,mojing_yueka=0,mojing_libao=0,mojing_ditu=0,mojing_huodong=0,mojing_gaoding=0;
 var chihe_zong=0,chihe_xian=0,chihe_huodong=0,chihe_ditu=0,chihe_libao=0;
 var hongpiao_zong=0,hongpiao_xian=0,hongpiao_huodong=0,hongpiao_libao=0,hongpaio_ditu=0;
@@ -610,7 +638,7 @@ var dangqi=document.querySelectorAll(".dangqi");
 
 dangqi.forEach(function(a){
 a.addEventListener('change',function(){
-  var s=document.getElementsByClassName("yueka")[0];
+  var =document.getElementsByClassName("yueka")[0];
   if(s.checked)
     {
       mojing_yueka=day*100;
@@ -622,7 +650,7 @@ a.addEventListener('change',function(){
 })
 })
 
-var s=document.getElementsByClassName("yueka")[0];
+var =document.getElementsByClassName("yueka")[0];
 s.addEventListener('change',function(){
 if(s.checked)
   {
