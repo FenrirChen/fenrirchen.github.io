@@ -33,7 +33,7 @@ setInterval(() => {
     document.getElementsByClassName('time')[0].innerText = formatDateTime(new Date());  
   }, 1000);
 setInterval(() => {  
-  document.getElementsByClassName('yineng')[0].innerText=("当前卡池：噪音【诺拉】(7.11-8.22)------剩余时间："+String(daysSinceYear2000("2024-08-22")-daysSinceYear2000(formatDateTime(now)))+"天");  
+  document.getElementsByClassName('yineng')[0].innerText=("当前卡池：噪音【诺拉】(7.11-8.22)------剩余时间:"+String(daysSinceYear2000("2024-08-22")-daysSinceYear2000(formatDateTime(now)))+"天");  
 }, 1000);
 function onlick(jj){
   if(jj==1)
@@ -68,9 +68,9 @@ function reflesh(){
   mojing_zong=Number(mojing_xian)+Number(mojing_yueka)+Number(mojing_libao)+Number(mojing_ditu)+Number(mojing_huodong)+Number(mojing_gaoding);
   hongpiao_zong=Number(hongpiao_xian)+Number(hongpiao_huodong)+Number(hongpaio_ditu)+Number(hongpiao_libao);
   chihe_zong=Number(chihe_xian)+Number(chihe_huodong)+Number(chihe_ditu)+Number(chihe_libao);
-  document.getElementsByClassName("mojing_tiaoz")[0].innerText=("总计墨晶："+String(mojing_zong));
-  document.getElementsByClassName("hongpiao_tiaoz")[0].innerText=("总计红票："+String(hongpiao_zong));
-  document.getElementsByClassName("chihe_tiaoz")[0].innerText=("总计赤核："+String(chihe_zong));
+  document.getElementsByClassName("mojing_tiaoz")[0].innerText=("总计墨晶:"+String(mojing_zong));
+  document.getElementsByClassName("hongpiao_tiaoz")[0].innerText=("总计红票:"+String(hongpiao_zong));
+  document.getElementsByClassName("chihe_tiaoz")[0].innerText=("总计赤核:"+String(chihe_zong));
 }
 
 function max(a,b){
