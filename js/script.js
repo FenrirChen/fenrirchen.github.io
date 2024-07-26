@@ -87,17 +87,17 @@ function shuru(ty){
   if(ty==1)
   {
     mojing_xian=document.getElementsByClassName("tiaoz1")[0].value;
-    document.getElementsByClassName("mojing_tiaoz2")[0].innerText=("现有："+String(mojing_xian));
+    document.getElementsByClassName("mojing_tiaoz2")[0].innerText=("现有:"+String(mojing_xian));
   }
   if(ty==2)
   {
     chihe_xian=document.getElementsByClassName("tiaoz1")[1].value;
-    document.getElementsByClassName("mojing_tiaoz2")[6].innerText=("现有："+String(chihe_xian));
+    document.getElementsByClassName("mojing_tiaoz2")[6].innerText=("现有:"+String(chihe_xian));
   }
   if(ty==3)
   {
     hongpiao_xian=document.getElementsByClassName("tiaoz1")[2].value;
-    document.getElementsByClassName("mojing_tiaoz2")[10].innerText=("现有："+String(hongpiao_xian));
+    document.getElementsByClassName("mojing_tiaoz2")[10].innerText=("现有:"+String(hongpiao_xian));
   }
   reflesh();
 }
@@ -610,19 +610,19 @@ var dangqi=document.querySelectorAll(".dangqi");
 
 dangqi.forEach(function(a){
   a.addEventListener('change',function(){
-    var s=document.getElementsByClassName("yueka")[0];
+    var =document.getElementsByClassName("yueka")[0];
     if(s.checked)
       {
         mojing_yueka=day*100;
       }
       else
         mojing_yueka=0;
-      document.getElementsByClassName("mojing_tiaoz2")[1].innerText=("月卡："+String(mojing_yueka));
+      document.getElementsByClassName("mojing_tiaoz2")[1].innerText=("月卡:"+String(mojing_yueka));
       reflesh();
   })
 })
 
-var s=document.getElementsByClassName("yueka")[0];
+var =document.getElementsByClassName("yueka")[0];
 s.addEventListener('change',function(){
   if(s.checked)
     {
